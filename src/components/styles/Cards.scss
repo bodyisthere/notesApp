@@ -1,0 +1,96 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.card {
+    font-size: 20px;
+    width: 400px;
+    height: 250px;
+    background: #f4b41a;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px 30px 0px;
+    &__top {
+        flex-grow: 1;
+        display: flex;
+    }
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__delete {
+        background: transparent;
+        font-size: 20px;
+        color: black;
+        transition: all .2s;
+    }
+    &__delete:hover {
+        color: white;
+    }
+}
+
+.add-card {
+    font-size: 20px;
+    width: 400px;
+    height: 250px;
+    background: #0f6b7b;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 0px 0px 30px 0px;
+    display: flex;
+    flex-direction: column;
+    &__input {
+        display: flex;
+        align-items: flex-start;
+        font-size: 17px;
+        width: 100%;
+        background: transparent;
+        flex-grow: 1;
+    }
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__save {
+        font-size: 18px;
+        padding: 5px 15px; 
+        border-radius: 20px;
+    }
+}
+
+.add-card--error {
+    animation: wiggle 1s linear;
+    box-shadow: 0px 2px 15px 1px rgb(213, 36, 36);
+}
+
+@keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+}
+
